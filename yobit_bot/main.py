@@ -15,7 +15,10 @@ def get_price_btc_usd():
 
 bot = Bot(token, parse_mode="HTML")
 dp = Dispatcher(bot=bot)
-loop = asyncio.
+
 
 if __name__ == "__main__":
-    print(get_price_btc_usd())
+    # print(get_price_btc_usd())
+    from handlers import send_to_admin
+    from handlers import bot, dp
+    executor.start_polling(dp, on_startup=send_to_admin)
